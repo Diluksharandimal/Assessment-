@@ -12,6 +12,20 @@ min-width: 50%;
 min-height: 650px;
 margin-top: 20px;
 margin-left: 18%;
+
+
+@media (max-width: 768px) {
+  width: 90%;
+  margin-left: 5%;
+  min-height: 500px;
+}
+
+ @media (max-width: 480px) {
+    width: 100%;
+    margin-left: 0;
+    min-height: 400px;
+  }
+
 `;
 
 export const SignUpContainer = styled.div`
@@ -29,6 +43,16 @@ export const SignUpContainer = styled.div`
    z-index: 5;
  ` 
  : null}
+  @media (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    z-index: 5;
+    transform: translateX(100%);
+    ${props => props.signinIn !== true ? `
+      transform: translateX(0);
+    ` : null}
+  }
 `;
 
 
@@ -41,6 +65,11 @@ left: 0;
 width: 50%;
 z-index: 2;
 ${props => (props.signinIn !== true ? `transform: translateX(100%);` : null)}
+ @media (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    ${props => (props.signinIn !== true ? `transform: translateX(0);` : null)}
+  }
 `;
 
 export const Form = styled.form`
@@ -52,11 +81,19 @@ flex-direction: column;
 padding: 0 50px;
 height: 100%;
 text-align: center;
+
+ @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Title = styled.h1`
 font-weight: bold;
 margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Input = styled.input`
@@ -66,6 +103,10 @@ border-radius:20px;
 padding: 12px 15px;
 margin: 8px 0;
 width: 100%;
+
+ @media (max-width: 768px) {
+    padding: 10px 12px;
+  }
 `;
 
 
@@ -87,6 +128,11 @@ export const Button = styled.button`
    &:focus {
        outline: none;
    }
+       
+  @media (max-width: 768px) {
+    padding: 10px 30px;
+    font-size: 10px;
+  }
 `;
 export const GhostButton = styled(Button)`
 background-color: transparent;
@@ -98,6 +144,9 @@ color: #090808;
 font-size: 14px;
 text-decoration: none;
 margin: 15px 0;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 export const OverlayContainer = styled.div`
 position: absolute;
@@ -110,6 +159,13 @@ transition: transform 0.6s ease-in-out;
 z-index: 100;
 ${props =>
  props.signinIn !== true ? `transform: translateX(-100%);` : null}
+
+   @media (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    transform: translateX(-100%);
+    ${props => props.signinIn !== true ? `transform: translateX(0);` : null}
+  }
 `;
 
 export const Overlay = styled.div`
@@ -128,6 +184,10 @@ width: 200%;
 transform: translateX(0);
 transition: transform 0.6s ease-in-out;
 ${props => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const OverlayPanel = styled.div`
@@ -143,6 +203,10 @@ export const OverlayPanel = styled.div`
     width: 50%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
+
+      @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const LeftOverlayPanel = styled(OverlayPanel)`
@@ -163,5 +227,9 @@ font-size: 16px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
   color: white;
+
+   @media (max-width: 768px) {
+    font-size: 14px;
+  }
   
 `;
