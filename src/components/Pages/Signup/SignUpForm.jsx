@@ -48,7 +48,7 @@ function SignUpForm() {
             <Components.RightOverlayPanel signinIn={signIn}>
               <Components.Title>Hello!</Components.Title>
               <Components.Paragraph>
-                Enter Your personal details and start the journey with us
+                Please enter Your personal details and start the journey with us
               </Components.Paragraph>
               <Components.GhostButton onClick={() => toggle(false)}>
                 Sign Up
