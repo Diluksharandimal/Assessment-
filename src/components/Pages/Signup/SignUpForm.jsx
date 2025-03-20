@@ -14,9 +14,9 @@ function SignUpForm() {
           <Components.Form >
             <Components.Title>Create Account</Components.Title>
 
-            <Components.Input type='email' name="mails" placeholder='Email'  />
-            <Components.Input type='password' name="paswds" placeholder='Password'  />
-            <Components.Input type='password' name="rePaswd" placeholder='Re-enter Password' />
+            <Components.Input type='email' name="mails" placeholder='Email' required  />
+            <Components.Input type='password' name="paswds" placeholder='Password' required />
+            <Components.Input type='password' name="rePaswd" placeholder='Re-enter Password' required/>
 
             <Components.Button>Sign Up</Components.Button>
           </Components.Form>
@@ -25,8 +25,8 @@ function SignUpForm() {
         <Components.SignInContainer signinIn={signIn}>
           <Components.Form>
             <Components.Title>Sign in</Components.Title>
-            <Components.Input type='email' name="mail" placeholder='Email' />
-            <Components.Input type='password' name="paswd" placeholder='Password' />
+            <Components.Input type='email' name="mail" placeholder='Email' required />
+            <Components.Input type='password' name="paswd" placeholder='Password' required />
             <Components.Anchor href='/restpsw'>Forgot your password?</Components.Anchor>
             <Components.Button>Sign In</Components.Button>
           </Components.Form>
